@@ -90,10 +90,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_registration',
     'app.apps.AppConfig',
-    'bootstrap5',
-    'cloudinary',
-    'rest_framework',
-    'mathfilters'
+    
 ]
 
 MIDDLEWARE = [
@@ -143,9 +140,9 @@ WSGI_APPLICATION = 'awards.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'awards',
-        'USER': 'developer',
-        'PASSWORD':'developerwilson'
+        'NAME': 'flash',
+        'USER': 'moringa',
+        'PASSWORD':'mutua'
     }
 }
 

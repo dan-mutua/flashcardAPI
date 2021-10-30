@@ -14,10 +14,10 @@ class UserSerializer(serializers.ModelSerializer):
   def validate(self,attrs):
     email= attrs.get('email', '')
     if User.objects.filter(email=email).exists():
-      raise serializers.ValidationError({'email',('Email is already taken SORRYY!!')})  
+      raise serializers.ValidationError({'email':('Email is already taken SORRYY!!')})  
 
     return super().validate(attrs) 
 
 
   def create (self, validated_data):
-    return User.objects.create_user(validated_data)   
+    return User.objects.create_user(**validated_data)   
